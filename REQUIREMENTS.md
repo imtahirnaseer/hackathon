@@ -1,14 +1,19 @@
-# ZENTRA — Product Requirements Document
-**Version:** 1.0  
-**Status:** Seed Stage / MVP Development  
+
+## Creating comprehensive requirements.md for Zentra platform
+
+## Document Information
+- **Version**: 1.0
+- **Date**: February 2026
+- **Status**: Seed Stage MVP
+- **Target Launch**: Delhi, August 2026
 
 ---
 
 ## 1. Executive Summary
 
-Zentra is a safety-first tourism technology platform connecting lost or vulnerable tourists with verified, local guides in under 5 minutes. The platform combines human assistance, real-time translation, emergency safety features, and fair economics to solve daily tourist crises in India and emerging markets.
+Zentra is a safety-first tourism technology platform connecting lost/confused tourists with verified, trusted local guides in India and emerging global markets. The platform bridges the gap between human assistance and technology through real-time translation, safety features, and fair economic models.
 
-**Core Value Proposition:** *"Your Local Friend in Your Pocket"*
+**Core Value Proposition**: "Your Local Friend in Your Pocket" - Instant, trusted, language-friendly local help anywhere, anytime.
 
 ---
 
@@ -16,250 +21,362 @@ Zentra is a safety-first tourism technology platform connecting lost or vulnerab
 
 ### 2.1 Market Pain Points
 - **2.5 million tourists get lost daily in India**
-- Language barriers at critical transit points (airports, stations, hotels)
-- Overcharging by vendors (up to 300% markup)
-- Missed connections due to miscommunication
-- Food safety/allergen risks
+- Language barriers at airports, stations, and hotels
+- Overcharging by transport and local vendors (up to 300% markup)
+- Missing trains, buses, and flights due to miscommunication
+- Food safety concerns and allergen communication issues
 - Navigation of unsafe areas unknowingly
-- **$10B annual economic loss** from poor tourist experiences
 
-### 2.2 Affected Segments
-| Segment | Annual Volume | Key Pain Point |
-|---------|--------------|----------------|
-| International Tourists (Japan, China, Korea) | 1.8M | Zero Hindi/English knowledge |
-| Solo Female Travelers | 3.2M | Safety as #1 concern |
-| Families & Senior Citizens | 2.1M | Need fast, accurate assistance |
+### 2.2 Economic Impact
+- **$10 billion lost annually** due to poor tourist experiences
+- Lost repeat visits and negative global perception
+- Panic, fear, and helplessness especially among women and elderly travelers
 
-### 2.3 Guide Side Problems
+### 2.3 Stakeholder Suffering
+
+#### International Tourists (1.8M annually from Japan, China, Korea)
+- Zero knowledge of Hindi or English
+- High dependency on strangers
+- Cultural navigation challenges
+
+#### Solo Female Travelers (3.2M annually)
+- Safety is #1 concern
+- Lack of verified help increases vulnerability
+- Need for trusted companionship
+
+#### Families & Senior Citizens (2.1M annually)
+- Children and elderly require fast, accurate assistance
+- Medical emergency concerns
+- Accessibility needs
+
+#### Local Guides (Overlooked Stakeholders)
 - Underpaid by existing platforms (40-50% commission)
-- Lack digital tools and verification
-- Unstable income, loss of trust
+- Lack digital tools and verification support
+- Unstable income and lack of trust on both sides
 
 ---
 
-## 3. Product Vision & Goals
+## 3. Solution Overview
 
-### 3.1 Vision
-"No tourist feels helpless. Every guide earns with dignity. Technology strengthens human connection."
+### 3.1 Platform Definition
+Zentra is a mobile + web platform that connects tourists to verified local guides within **5 minutes**, combining human assistance, real-time translation, safety technology, and fair economics.
 
-### 3.2 Mission
-Provide instant, trusted, language-friendly local help — anywhere, anytime.
-
-### 3.3 Success Metrics (Year 1)
-- **Revenue:** ₹51 Crore
-- **Gross Margin:** 70%
-- **Guide Earnings:** ₹88 Crore
-- **Cash Positive:** Month 3
-- **Booking Commission:** 12% (₹1,000 avg booking → ₹880 guide earnings)
+### 3.2 Key Differentiators
+- **Verified humans**, not strangers
+- **Built-in safety systems** (SOS, GPS tracking)
+- **80% cheaper** than hotel concierges
+- **100% safer** than informal guides
+- Fair guide earnings (only 12% commission vs 40-50% industry standard)
 
 ---
 
 ## 4. Functional Requirements
 
-### 4.1 Core User Flows
+### 4.1 User Flow - Tourist Journey
 
-#### Flow 1: Tourist Booking (Target: &lt;5 min to connection)
-1. **Onboarding** — Multilingual registration (Hindi, English, Japanese, Mandarin, Korean)
-2. **Search & Match** — Select location, need type, language
-   - AI-assisted matching within 2 minutes
-   - Guide profiles with ratings, verification badges, languages
-3. **Secure Booking** — Escrow payment system
-   - Funds held until service completion
-   - Transparent pricing (no hidden fees)
-4. **Connection** — In-app chat + voice calling
-   - Live GPS sharing
-   - Real-time voice translation
-5. **Service Completion** — Release payment, rating, receipt generation
+#### Step 1: Search & Match (Target: <2 minutes)
+**FR-1.1**: Tourist shall select preferred language from supported languages
+**FR-1.2**: Tourist shall specify need type (navigation, translation, emergency, general guidance, food assistance, transport)
+**FR-1.3**: System shall perform AI-assisted matching based on:
+- Language compatibility
+- Proximity (GPS-based)
+- Guide availability status
+- Tourist need category
+- Guide specialization tags
 
-#### Flow 2: Emergency Support (Critical Safety Feature)
-- **One-tap Panic Button** — Immediate alert
-- **Auto-GPS Sharing** — Location sent to:
-  - Local police/emergency services
-  - Pre-configured family contacts
-  - Zentra support team
-- **Live Translation** — Emergency phrase assistance
+**FR-1.4**: System shall display matched guide profiles with:
+- Verification badge status
+- Rating and review count
+- Languages spoken
+- Specializations
+- Response time
+- Photo and brief bio
 
-#### Flow 3: Guide Onboarding & Management
-- **Verification Process:** ID check, background verification, language testing
-- **Profile Management:** Availability, service areas, specialties
-- **Earnings Dashboard:** Real-time earnings, withdrawal, transaction history
-- **Subscription Tier:** Premium guides (₹2,400/month) for priority listing
+#### Step 2: Secure Booking
+**FR-2.1**: System shall support escrow payment system
+**FR-2.2**: Tourist shall view transparent pricing before confirmation
+**FR-2.3**: Payment shall be held in escrow until service completion
+**FR-2.4**: Auto-release mechanism after service confirmation or 24-hour dispute window
+**FR-2.5**: Support for multiple payment methods (UPI, cards, international wallets)
 
-### 4.2 Feature Specifications
+#### Step 3: Connect & Explore
+**FR-3.1**: In-app chat system with message persistence
+**FR-3.2**: Voice calling capability within app
+**FR-3.3**: Real-time voice translation feature
+**FR-3.4**: Photo and location sharing
+**FR-3.5**: Session timer and cost tracker
 
-| Feature | Priority | Description | Acceptance Criteria |
-|---------|----------|-------------|---------------------|
-| Multilingual Onboarding | P0 | Support 5+ languages | RTL support, voice-guided setup |
-| AI Matching Engine | P0 | Match tourist to guide | &lt;2 min match time, 90% satisfaction |
-| Escrow Payments | P0 | Secure transaction holding | Funds released only on completion |
-| Real-time Translation | P0 | Voice-to-voice translation | Support JA/ZH/KO ↔ HI/EN |
-| SOS Emergency Button | P0 | One-tap safety alert | &lt;3 sec activation, GPS accuracy &lt;10m |
-| In-app Communication | P1 | Chat + voice calls | End-to-end encryption |
-| Trip History | P1 | Past bookings & receipts | 2-year retention, PDF export |
-| Guide Verification | P1 | KYC + background checks | 48-hour verification SLA |
-| Premium Subscriptions | P2 | Priority listing for guides | Stripe/Razorpay integration |
-| Analytics Dashboard | P2 | Admin insights | Real-time booking metrics |
+#### Step 4: Emergency Support
+**FR-4.1**: One-tap panic button accessible from all screens
+**FR-4.2**: Automatic GPS location sharing with:
+- Local police/emergency services
+- Pre-configured emergency contacts
+- Zentra support team
 
-### 4.3 Translation Requirements
-- **Supported Pairs:**
-  - Japanese ↔ Hindi/English
-  - Mandarin ↔ Hindi/English
-  - Korean ↔ Hindi/English
-- **Modes:** Text chat translation, Voice-to-voice real-time
-- **Context Awareness:** Tourism-specific vocabulary (locations, food, transport)
+**FR-4.3**: Emergency escalation protocols
+**FR-4.4**: Offline emergency mode (SMS-based location sharing)
+
+### 4.2 User Flow - Guide Journey
+
+**FR-G1**: Guide onboarding with document verification
+**FR-G2**: Background check integration
+**FR-G3**: Language proficiency testing
+**FR-G4**: Training module completion
+**FR-G5**: Availability toggle and schedule management
+**FR-G6**: Earnings dashboard with transaction history
+**FR-G7**: Rating and review management
+**FR-G8**: Dispute resolution center
+
+### 4.3 Core Features
+
+#### 4.3.1 Multilingual Support
+**FR-M1**: Support for minimum languages:
+- Tourist: English, Japanese, Mandarin, Korean, French, German, Spanish, Arabic
+- Local: Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Punjabi, Kannada, Malayalam
+
+**FR-M2**: AI-powered real-time voice translation
+**FR-M3**: Text translation in chat
+**FR-M4**: Cultural context tips for guides
+
+#### 4.3.2 Safety & Trust
+**FR-S1**: Government ID verification for all guides
+**FR-S2**: Criminal background checks
+**FR-S3**: Real-time GPS tracking during active sessions
+**FR-S4**: Session recording (with consent) for dispute resolution
+**FR-S5**: 24/7 support hotline
+**FR-S6**: Safety check-ins every 30 minutes during sessions
+**FR-S7**: Safe zone mapping (areas to avoid)
+
+#### 4.3.3 Financial Systems
+**FR-F1**: Transparent pricing calculator
+**FR-F2**: Commission split (12% platform, 88% guide)
+**FR-F3**: Instant payout option for guides (minus fee)
+**FR-F4**: Weekly settlement option
+**FR-F5**: Tax documentation generation
+**FR-F6**: Refund processing within 48 hours
+
+#### 4.3.4 Admin & Operations
+**FR-A1**: Super admin dashboard
+**FR-A2**: Guide verification workflow
+**FR-A3**: Dispute management system
+**FR-A4**: Analytics and reporting
+**FR-A5**: Content management system
+**FR-A6**: Marketing campaign management
 
 ---
 
 ## 5. Non-Functional Requirements
 
 ### 5.1 Performance
-- **App Launch:** &lt;3 seconds
-- **Match Time:** &lt;2 minutes (AI-assisted)
-- **Translation Latency:** &lt;500ms for voice
-- **Uptime:** 99.9% SLA
+**NFR-1**: Matchmaking response time < 2 minutes (95th percentile)
+**NFR-2**: App launch time < 3 seconds
+**NFR-3**: Translation latency < 2 seconds
+**NFR-4**: Support 10,000 concurrent users at launch
+**NFR-5**: 99.9% uptime SLA
 
-### 5.2 Security & Safety
-- **Data Encryption:** AES-256 at rest, TLS 1.3 in transit
-- **KYC Compliance:** Government ID verification for guides
-- **GDPR/CCPA Ready:** Data portability, right to deletion
-- **Emergency Response:** 24/7 human monitoring for SOS alerts
+### 5.2 Security
+**NFR-6**: End-to-end encryption for all communications
+**NFR-7**: PCI DSS compliance for payments
+**NFR-8**: GDPR compliance for international users
+**NFR-9**: Data localization for Indian users
+**NFR-10**: Regular security audits (quarterly)
 
 ### 5.3 Scalability
-- Support 10,000 concurrent users (Year 1 target)
-- Horizontal scaling architecture
-- CDN for static assets (images, audio)
+**NFR-11**: Horizontal scaling architecture
+**NFR-12**: CDN for static assets
+**NFR-13**: Database sharding strategy for multi-city expansion
 
-### 5.4 Accessibility
-- Voice-guided navigation for visually impaired
-- High contrast mode
-- Screen reader compatibility
-
----
-
-## 6. Platform Requirements
-
-### 6.1 Mobile Apps (Primary)
-- **iOS:** iOS 14+, Swift/SwiftUI
-- **Android:** Android 8+, Kotlin/Jetpack Compose
-- **Offline Mode:** Cached maps, emergency phrases
-
-### 6.2 Web Platform
-- **Responsive Web App:** For guide management, admin
-- **Browser Support:** Chrome, Safari, Firefox (last 2 versions)
-
-### 6.3 Backend Infrastructure
-- **Cloud:** AWS Mumbai / Google Cloud Mumbai (data sovereignty)
-- **Database:** PostgreSQL (relational), Redis (caching/sessions)
-- **Real-time:** WebSockets for chat/calls, Firebase for push notifications
-- **AI/ML:** 
-  - Matching algorithm (Python/TensorFlow)
-  - Translation API (Google Cloud Translation / DeepL + custom models)
-  - Speech-to-text (Whisper API)
+### 5.4 Usability
+**NFR-14**: WCAG 2.1 AA accessibility compliance
+**NFR-15**: Support for low-bandwidth mode
+**NFR-16**: Offline mode for critical features
+**NFR-17**: Maximum 3 taps to reach emergency button
 
 ---
 
-## 7. Integration Requirements
+## 6. Revenue Model Requirements
 
-### 7.1 Payment Gateway
-- **India:** Razorpay (UPI, Cards, Wallets)
-- **International:** Stripe (Cards, Apple Pay, Google Pay)
-- **Escrow Logic:** Custom implementation with payment hold/release
+### 6.1 Revenue Streams
 
-### 7.2 Maps & Location
-- **Primary:** Google Maps Platform (Places, Directions, Geocoding)
-- **Fallback:** MapMyIndia (India-specific accuracy)
-- **GPS Tracking:** Real-time location streaming (30s intervals during active service)
+**REV-1: Booking Commission (Primary)**
+- 12% per transaction
+- Average booking value: ₹1,000
+- Guide earns: ₹880 per transaction
 
-### 7.3 Communication
-- **Video/Voice:** Twilio or Agora.io SDK
-- **SMS:** Twilio (OTP, emergency alerts)
-- **Push Notifications:** Firebase Cloud Messaging
+**REV-2: Live Voice Translation (Premium)**
+- ₹80 per minute
+- Usage: Emergencies and complex tasks
+- Auto-triggered when language mismatch detected
 
-### 7.4 Verification Services
-- **KYC:** HyperVerge or IDfy (Indian market)
-- **Background Checks:** Manual + API verification
+**REV-3: Premium Guide Subscription**
+- ₹2,400/month
+- Benefits: Priority listing, verification badge, analytics dashboard
 
----
+**REV-4: Future Streams (Phase 2)**
+- Tourist insurance partnerships
+- Hotel/airport commission referrals
+- Branded safety devices rental
 
-## 8. Business Rules
-
-### 8.1 Pricing Model
-1. **Booking Commission:** 12% per transaction (Zentra keeps ₹120 on ₹1,000 booking)
-2. **Live Translation:** ₹80/minute (premium add-on)
-3. **Guide Subscription:** ₹2,400/month (priority placement, verified badge)
-
-### 8.2 Cancellation Policy
-- **Tourist cancel &lt;1 hour:** 50% refund
-- **Tourist cancel &gt;1 hour:** Full refund minus processing fee
-- **Guide no-show:** Account suspension, automatic refund
-
-### 8.3 Dispute Resolution
-- 48-hour mediation window
-- Evidence collection (chat logs, GPS data)
-- Arbitration team for unresolved cases
+### 6.2 Financial Projections (Year 1)
+- **Total Revenue Target**: ₹51 Crore
+- **Gross Margin**: 70%
+- **Guide Earnings**: ₹88 Crore
+- **Cash-positive**: Month 3
 
 ---
 
-## 9. Regulatory & Compliance
+## 7. Technical Architecture Requirements
 
-### 9.1 India-Specific
-- **PDPB Compliance:** Personal Data Protection Bill
-- **GST Registration:** 18% on commission fees
-- **Tourism Board Registration:** Ministry of Tourism approval
-- **Police Verification:** Mandatory for all guides
+### 7.1 Platform
+- Mobile Apps: iOS (Swift) and Android (Kotlin)
+- Web App: React/Next.js for guides and admin
+- Backend: Node.js/Python microservices
+- Database: PostgreSQL + Redis for caching
+- Real-time: WebSockets for chat/calls
+- Translation: Integration with Google Translate API + custom models
+- Payments: Razorpay/Stripe
+- Maps: Google Maps API / MapMyIndia
 
-### 9.2 International Expansion (2027+)
-- **GDPR:** EU data residency
-- **Local Tourism Laws:** Per-country guide licensing
-
----
-
-## 10. Roadmap
-
-### Phase 1: MVP (Months 1-4) — ₹20-25L Budget
-- Delhi launch only
-- iOS + Android apps
-- Basic matching + chat
-- Escrow payments
-- SOS button
-
-### Phase 2: Scale (Months 5-8)
-- Golden Triangle expansion (Agra, Jaipur)
-- Real-time voice translation
-- Premium subscriptions
-- Analytics dashboard
-
-### Phase 3: Expansion (Months 9-12)
-- Mumbai & Goa
-- AI matching optimization
-- Enterprise partnerships (hotels, airports)
-
-### Phase 4: International (2027)
-- Southeast Asia (Thailand, Vietnam, Indonesia)
-- Multi-country guide network
+### 7.2 Infrastructure
+- Cloud: AWS Mumbai region (primary)
+- CDN: CloudFront
+- Monitoring: DataDog/New Relic
+- Error Tracking: Sentry
+- Communication: Twilio (SMS/Voice), SendGrid (Email)
 
 ---
 
-## 11. Risks & Mitigation
+## 8. Go-to-Market Requirements
+
+### 8.1 Launch Strategy
+**Phase 1: Delhi (April 2026)**
+- Minimum 500 verified guides
+- Partnerships with 50 hotels
+- Airport counter presence
+- Tourism board collaboration
+
+**Phase 2: Golden Triangle (Sept 2026)**
+- Delhi, Agra, Jaipur corridor
+- 2,000 guides
+- Transport operator partnerships
+
+**Phase 3: Mumbai & Goa (Dec 2026)**
+- International airport focus
+- Beach safety programs
+- 5,000 guides
+
+**Phase 4: Southeast Asia (2027)**
+- Thailand, Vietnam, Indonesia
+- Localization requirements
+
+**Phase 5: Global (2028)**
+- Europe, Americas expansion
+
+### 8.2 Marketing Requirements
+- Digital marketing budget allocation
+- Guide referral incentive program
+- Tourist waitlist management
+- Influencer partnerships (travel bloggers)
+- PR campaign for safety features
+
+---
+
+## 9. Compliance & Legal Requirements
+
+**COMP-1**: GST registration and compliance
+**COMP-2**: Tourism operator licenses (state-wise)
+**COMP-3**: Data protection compliance (DPDP Act 2023)
+**COMP-4**: Labour law compliance for guides
+**COMP-5**: Insurance coverage (liability, cyber)
+**COMP-6**: Foreign exchange regulations for international payments
+
+---
+
+## 10. Success Metrics (KPIs)
+
+### 10.1 Business Metrics
+- **Monthly Active Tourists**: 10,000 (Year 1 target)
+- **Guide Activation Rate**: >70%
+- **Average Session Rating**: >4.5/5
+- **Customer Acquisition Cost**: <₹500
+- **Lifetime Value**: >₹5,000
+- **Repeat Usage Rate**: >40%
+
+### 10.2 Safety Metrics
+- **Emergency Response Time**: <5 minutes
+- **Safety Incident Rate**: <0.1%
+- **Dispute Resolution Time**: <48 hours
+
+### 10.3 Financial Metrics
+- **Monthly Burn Rate**: <₹8L (pre-revenue)
+- **Runway**: 18 months with seed funding
+- **Unit Economics**: Positive by Month 3
+
+---
+
+## 11. Risk Mitigation
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| Guide supply shortage | High | Aggressive onboarding incentives, referral bonuses |
-| Safety incidents | Critical | 24/7 monitoring, insurance partnership, strict vetting |
-| Payment fraud | Medium | Escrow system, transaction limits, KYC |
-| Translation accuracy | Medium | Human-in-the-loop for complex phrases, feedback loops |
-| Regulatory changes | Medium | Legal advisory retainer, flexible architecture |
+| Guide supply shortage | High | Referral bonuses, training programs |
+| Safety incidents | Critical | Insurance, verification, real-time monitoring |
+| Payment fraud | Medium | Escrow, KYC, transaction limits |
+| Regulatory changes | Medium | Legal counsel, government relations |
+| Competition | Low | First-mover advantage, safety focus |
 
 ---
 
-## 12. Open Questions
+## 12. Future Roadmap (Post-MVP)
 
-1. Insurance partnership for guide liability coverage?
-2. Integration with Indian railway/airport authority systems?
-3. Offline translation model for low-connectivity areas?
-4. Accessibility partnerships (disabled traveler support)?
+### Phase 2 Features
+- AI travel companion (chatbot)
+- Group tour management
+- Itinerary planning
+- Integration with booking.com, MakeMyTrip
+- Wearable device integration
+
+### Phase 3 Features
+- Blockchain-based identity verification
+- DAO for guide governance
+- Predictive safety analytics
+- Virtual reality previews
 
 ---
 
-**Document Owner:** Product Team  
-**Review Cycle:** Bi-weekly during MVP phase  
+## 13. Investment Requirements
+
+**Seed Funding Ask**: ₹30 Lakh
+
+**Use of Funds**:
+- Product Development: ₹18L (60%)
+- Marketing & Operations: ₹7L (23%)
+- Compliance & Legal: ₹3L (10%)
+- Contingency: ₹2L (7%)
+
+**Timeline**: 4-6 months to MVP with efficient outsourcing
+
+---
+
+## 14. Appendix
+
+### A. Supported Languages (Phase 1)
+Tourist: EN, JA, ZH, KO, FR, DE, ES, AR
+Local: HI, TA, TE, BN, MR, GU, PA, KN, ML
+
+### B. Verification Documents (Guides)
+- Aadhaar Card
+- Police Verification Certificate
+- Bank Account Details
+- Language Proficiency Certificate (if claiming)
+
+### C. Emergency Contacts Integration
+- Police: 100
+- Tourist Helpline: 1363
+- Women Helpline: 181
+- Ambulance: 108
+
+---
+
+**Document Owner**: Product Team  
+**Review Cycle**: Monthly during MVP phase  
+**Next Review**: March 2026
